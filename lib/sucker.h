@@ -1,17 +1,17 @@
 #pragma once
 
-#include "Poco/Net/SocketStream.h"
 #include <Poco/Net/SocketAddress.h>
+#include <Poco/Net/SocketStream.h>
 
 class Sucker {
-public:
-    Sucker();
+   public:
+    Sucker(std::string ip, int port);
     ~Sucker();
 
-    int open();
-    int close();
+    void open();
+    void close();
 
-private:
-    SocketAddress addr;
-    StreamSocket socket;
+   private:
+    Poco::Net::StreamSocket* socket;
+    Poco::Net::SocketStream* stream;
 };

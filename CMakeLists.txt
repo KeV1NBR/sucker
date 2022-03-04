@@ -36,10 +36,6 @@ set(DEPS_PATHS
 set(LIB_PATHS
     ${CMAKE_CURRENT_SOURCE_DIR}/lib/
     )
-
-# configure
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/config)
-
 if(${BUILD_TEST})
     set(UTIL_PATHS ${UTIL_PATHS} ${CMAKE_CURRENT_SOURCE_DIR}/test)
 endif()
